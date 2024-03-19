@@ -8,6 +8,7 @@ export default async function Home() {
   const products = await prisma.product.findMany({
     orderBy: { id: "desc" },
   });
+
   return (
     <div>
       <div className="hero rounded-xl bg-base-200">
